@@ -18,13 +18,15 @@ const activityFunction: AzureFunction = async function (
 ): Promise<SimplePublicObjectWithAssociations[]> {
   context.log("HTTP trigger function processed a request.");
   const hubspotClient = new hubspot.Client({
-    accessToken: "pat-eu1-7b7968a5-d9f4-4960-8113-496d0a78624f",
+    accessToken: "", // To replace
   });
 
   try {
+    console.log(context.bindingData.data);
     const apiResponse = await hubspotClient.crm.companies.searchApi.doSearch(
       context.bindingData.data
     );
+    console.log("API RESPONSE : ", apiResponse);
 
     return apiResponse.results;
   } catch (e) {
