@@ -1,0 +1,15 @@
+{
+  "curly" : true,
+  "eqeqeq" : true,
+  "esnext": true,
+  "expr": true,
+  "mocha": true,
+  "node": true,
+  "undef": true,
+  "unused": true,
+  "shadow": true,
+  "globals": {
+    "setup": true,
+    "teardown": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "bindings": [
+    {
+      "name": "blabla",
+      "type": "activityTrigger",
+      "direction": "in"
+    }
+  ],
+  "scriptFile": "../dist/SearchCompanies/index.js"
+}
